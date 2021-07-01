@@ -4,16 +4,17 @@
 <a asp-action="AddHouse" asp-controller="Product">Add house to database</a>
 
 @foreach(House h in Model)
-            {
-<div style="border: 1px solid black">
-    <p>Id: @h.Id</p>
-    <p>Address: @h.Address</p>
-    <p>City: @h.City</p>
-    <p>State: @h.State</p>
-    <p>Price: $@h.Price</p>
-    <p>Quantity: @h.Quantity</p>
-    <p>Description: @h.Description</p>
-    <a asp-action="Delete" asp-controller="Product" asp-route-Id="@h.Id">Delete this entry</a>
-    <a asp-action="Update" asp-controller="Product" asp-route-Id="@h.Id">Update this entry</a>
-</div>
-            }
+    {
+        <div style="border: 1px solid black">
+            <p>Id: @h.Id</p>
+            <p>Address: @h.Address</p>
+            <p>City: @h.City</p>
+            <p>State: @h.State</p>
+            <p>Price: $@h.Price</p>
+            <p>Quantity: @h.Quantity</p>
+            <p>Description: @h.Description</p>
+            <a asp-action="Delete" asp-controller="Product" asp-route-Id="@h.Id">Delete this entry</a>
+            <a asp-action="Update" asp-controller="Product" asp-route-Id="@h.Id">Update this entry</a>
+            <a asp-action="Details" asp-controller="Product" asp-route-Id="@h.Id">View details for this entry</a>
+        </div>
+    }

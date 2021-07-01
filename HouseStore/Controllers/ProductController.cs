@@ -17,6 +17,12 @@ namespace HouseStore.Controllers
             return View(houses);
         }
 
+        public IActionResult Details(int Id)
+        {
+            House h = db.Houses.Find(Id);
+            return View(h);
+        }
+
         public IActionResult AddHouse()
         {
             return View();
