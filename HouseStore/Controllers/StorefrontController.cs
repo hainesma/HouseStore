@@ -15,7 +15,7 @@ namespace HouseStore.Controllers
         HousesContext db = new HousesContext();
         public IActionResult Index()
         {
-            List<House> houses = db.Houses.ToList();
+            List<House> houses = db.Houses.Where(x => x.Quantity == 1).ToList();
             return View(houses);
         }
 
@@ -30,6 +30,7 @@ namespace HouseStore.Controllers
         {
             h.Quantity = 0;
             db.Houses.Update(h);
+            db.SaveChanges();
             return RedirectToAction("Index", "Storefront");
         }
 
