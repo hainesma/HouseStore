@@ -44,5 +44,20 @@ namespace HouseStore.Controllers
             db.SaveChanges();
             return RedirectToAction("Index", "Product");
         }
+
+        public IActionResult Update(int Id)
+        {
+            House h = db.Houses.Find(Id);
+            return View(h);
+        }
+
+        [HttpPost]
+        public IActionResult Update(House h)
+        {
+            db.Houses.Update(h);
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Product");
+        }
     }
 }
