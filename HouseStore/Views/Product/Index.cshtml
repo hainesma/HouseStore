@@ -1,0 +1,16 @@
+﻿@model IEnumerable<House>
+
+<h2>Houses in Database:</h2>
+
+@foreach(House h in Model)
+            {
+<div style="border: 1px solid black">
+    <p>Id: @h.Id</p>
+    <p>Address: @h.Address</p>
+    <p>City: @h.City</p>
+    <p>State: @h.State</p>
+    <p>Price: $@h.Price</p>
+    <p>Description: @h.Description</p>
+    <a asp-action="Buy" asp-controller="Storefront" asp-route-Id="@h.Id">Buy this house!</a>
+</div>
+            }

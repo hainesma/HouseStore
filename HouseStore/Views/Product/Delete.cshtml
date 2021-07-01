@@ -1,0 +1,16 @@
+﻿@model House 
+
+<div>
+    <p>Id: @Model.Id</p>
+    <p>Address: @Model.Address</p>
+    <p>City: @Model.City</p>
+    <p>State: @Model.State</p>
+    <p>Price: $@Model.Price</p>
+    <p>Description: @Model.Description</p>
+</div>
+
+<form method="post">
+    <input value="@Model.Id" type="hidden" name="Id" />
+    <p>Are you sure you want to delete this movie?</p>
+    <input value="I am sure" type="submit" />
+</form>
