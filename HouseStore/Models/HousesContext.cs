@@ -26,7 +26,7 @@ namespace HouseStore.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=Houses;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=tcp:dream-team.database.windows.net,1433;Initial Catalog=HousesDb;Persist Security Info=False;User ID=Project1;Password=mgXtx7sThrfeFcqB;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
