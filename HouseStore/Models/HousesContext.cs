@@ -40,7 +40,7 @@ namespace HouseStore.Models
 
                 entity.Property(e => e.City).HasMaxLength(25);
 
-                entity.Property(e => e.Description).HasMaxLength(1);
+                entity.Property(e => e.Description).HasMaxLength(250);
 
                 entity.Property(e => e.State).HasMaxLength(2);
 

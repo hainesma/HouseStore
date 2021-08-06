@@ -3,7 +3,9 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:44578",
+      //"applicationUrl": "http://localhost:44578",
+      "applicationUrl": "housestore20210806112107.azurewebsites.net",
+      
       "sslPort": 44366
     }
   },
