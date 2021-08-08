@@ -29,6 +29,7 @@ namespace HouseStore.Controllers
         public IActionResult Buy(House h)
         {
             h.Quantity = 0;
+            Console.WriteLine(h.Address);
             db.Houses.Update(h);
             db.SaveChanges();
             return RedirectToAction("Index", "Storefront");

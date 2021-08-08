@@ -1,15 +1,14 @@
 ﻿@model IEnumerable<House>
-
 <h2>Houses for sale:</h2>
-@foreach(House h in Model)
-            {
-                <div style="border: 1px solid black">
-                    <p>Address: @h.Address</p>
-                    <p>City: @h.City</p>
-                    <p>State: @h.State</p>
-                    <p>Price: $@h.Price</p>
-                    <p>Description: @h.Description</p>
-                    <button class="btn-primary rounded-15" asp-action="Buy" asp-controller="Storefront" asp-route-Id="@h.Id">See Details</button>
+@foreach (House h in Model)
+{
+    <div style="border: 1px solid black">
+        <p>Address: @h.Address</p>
+        <p>City: @h.City</p>
+        <p>State: @h.State</p>
+        <p>Price: $@h.Price</p>
+        <p>Description: @h.Description</p>
+        <a asp-action="Buy" asp-controller="Storefront" asp-route-Id="@h.Id"><button class="btn btn-primary">See Details</button></a>
 
-                </div>
-            }
+    </div>
+}
