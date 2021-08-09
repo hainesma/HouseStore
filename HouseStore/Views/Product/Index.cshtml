@@ -1,20 +1,21 @@
 ﻿@model IEnumerable<House>
-
-<h2>Houses in Database:</h2>
-<a asp-action="AddHouse" asp-controller="Product">Add house to database</a>
-
+<h2>Staff Portal</h2>
+<p>Manage the database from this page. Add, remove, or modify listings.</p>
+<a asp-action="AddHouse" asp-controller="Product"><button class="btn btn-primary">Add house to database</button></a>
+<br />
+<br />
+<h3>Houses in Database:</h3>
+<br />
 @foreach(House h in Model)
     {
-        <div style="border: 1px solid black">
+        <div style="border: 1px solid black; padding: 1em">
             <p>Id: @h.Id</p>
             <p>Address: @h.Address</p>
-            <p>City: @h.City</p>
-            <p>State: @h.State</p>
             <p>Price: $@h.Price</p>
             <p>Quantity: @h.Quantity</p>
-            <p>Description: @h.Description</p>
-            <a asp-action="Delete" asp-controller="Product" asp-route-Id="@h.Id">Delete this entry</a>
-            <a asp-action="Update" asp-controller="Product" asp-route-Id="@h.Id">Update this entry</a>
-            <a asp-action="Details" asp-controller="Product" asp-route-Id="@h.Id">View details for this entry</a>
+            <a asp-action="Delete" asp-controller="Product" asp-route-Id="@h.Id"><button class="btn btn-primary">Delete this entry</button></a>
+            <a asp-action="Update" asp-controller="Product" asp-route-Id="@h.Id"><button class="btn btn-primary">Update this entry</button></a>
+            <a asp-action="Details" asp-controller="Product" asp-route-Id="@h.Id"><button class="btn btn-primary">View details for this entry</button></a>
         </div>
+        <br />
     }
