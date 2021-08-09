@@ -32,7 +32,7 @@ namespace HouseStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<HousesContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<HousesContext>(options => options.UseSqlServer(Secret.connectionString));
             
         }
 
