@@ -19,12 +19,15 @@ namespace HouseStore.Controllers
             return View(houses);
         }
 
+        // This first Buy method return the Buy view for an individual property
         public IActionResult Buy(int id)
         {
             House h = db.Houses.Find(id);
             return View(h);
         }
 
+        // The second Buy method posts an updated house object to the DB,
+        // with quantity set to 0.
         [HttpPost]
         public IActionResult Buy(House h)
         {
@@ -32,11 +35,6 @@ namespace HouseStore.Controllers
             db.Houses.Update(h);
             db.SaveChanges();
             return RedirectToAction("Index", "Storefront");
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
