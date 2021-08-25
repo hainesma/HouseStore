@@ -34,23 +34,7 @@
         accessToken: 'your.mapbox.access.token'
     }).addTo(mymap);
 
-    function get_coords(address) {
-        var gc = new google.maps.Geocoder(),
-            opts = { 'address': address };
 
-        gc.geocode(opts, function (results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                var loc = results[0].geometry.location,
-                    lat = loc.$a,
-                    long = loc.ab;
-
-                // Success.  Do stuff here.
-            }
-            else {
-                // Ruh roh.  Output error stuff here
-            }
-        });
-    }
 </script>
 
 
