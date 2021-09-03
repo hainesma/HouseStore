@@ -1,6 +1,6 @@
 # HouseStore
 
-[Live Demo](https://housestore20210806112107.azurewebsites.net) (temporarily offline)
+[Live Demo](https://housestore20210806112107.azurewebsites.net)
 
 This is a basic ecommerce app with a real estate theme. It allows the user to perform CRUD actions on the database of houses through a web app. Both the SQL database and the app are hosted on Azure.
 
